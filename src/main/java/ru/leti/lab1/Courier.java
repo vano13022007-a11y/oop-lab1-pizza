@@ -1,0 +1,41 @@
+package ru.leti.lab1;
+
+public class Courier {
+    private boolean free;
+    private final String login;
+    private final String password;
+    private final String name;
+
+    public Courier(String name, boolean isFree, String login, String password) {
+        this.name = name;
+        this.free = isFree;
+        this.login = login;
+        this.password = password;
+    }
+
+    public boolean matches(String login, String password) {
+        return this.login.equals(login) && this.password.equals(password);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public boolean isFree() {
+        return free;
+    }
+
+    public void setFree(boolean free) {
+        this.free = free;
+    }
+
+    public void changeStatus(boolean free) {
+        this.free = free;
+    }
+
+    @Override
+    public String toString() {
+        return name;
+    }
+}
+
