@@ -124,7 +124,7 @@ public class Main {
     private static List<User> createTemporaryUsers() {
         return List.of(
                 new User(1, "Иван Вислобоков", "+7 927 666-66-66", "van0", "123456"),
-                new User(2, "Вячеслав Смирноа", "+7 927 777-77-77", "smirnov", "654321"));
+                new User(2, "Вячеслав Смирнов", "+7 927 777-77-77", "smirnov", "654321"));
     }
 
     private static void seedTemporaryData(List<User> users, Shop shop, Delivery delivery) {
@@ -142,13 +142,13 @@ public class Main {
         delivery.addCourier(max);
         delivery.addCourier(dima);
 
-        Product apples = shop.getProducts().get(0);
-        Product bread = shop.getProducts().get(1);
+        Product pepperoni = shop.getProducts().get(0);
+        Product cheeseChiken = shop.getProducts().get(1);
         delivery.addOrder(new Order(1, users.get(0),
-                List.of(new OrderItem(apples, 1, apples.getPrice())),
+                List.of(new OrderItem(pepperoni, 1, pepperoni.getPrice())),
                 "ул. Композиторов, 1к1", new StandardDelivery()));
         Order inDelivery = new Order(2, users.get(1),
-                List.of(new OrderItem(bread, 1, bread.getPrice())),
+                List.of(new OrderItem(cheeseChiken, 1, cheeseChiken.getPrice())),
                 "ул. Пионерская, 3", new StandardDelivery());
         delivery.addOrder(inDelivery);
         delivery.claimOrder(inDelivery, max);
