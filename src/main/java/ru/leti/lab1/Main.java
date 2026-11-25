@@ -124,7 +124,7 @@ public class Main {
     private static List<User> createTemporaryUsers() {
         return List.of(
                 new User(1, "Иван Вислобоков", "+7 927 666-66-66", "van0", "123456"),
-                new User(2, "Вячеслав Смирнов", "+7 927 777-77-77", "smirnov", "654321"));
+                new User(2, "Артем Артемович", "+7 927 777-77-77", "smirnov", "654321"));
     }
 
     private static void seedTemporaryData(List<User> users, Shop shop, Delivery delivery) {
